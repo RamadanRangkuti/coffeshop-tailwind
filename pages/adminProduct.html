@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/main.css">
+  <title>Coffeshop</title>
+</head>
+<body class="box-border md:grid md:grid-cols-5">
+  <header class="sticky top-0 z-10 col-span-5 order-1">
+    <nav class="bg-black flex justify-between items-center p-4 md:px-24 lg:px-24">
+      <div class="flex items-center justify-between gap-x-16">
+        <img src="../assets/icons/logo-nav-mobile.png" alt="logo-icon">
+        <div class="hidden lg:flex gap-x-8">
+          <a href="#home" class="hidden lg:block text-white ml-4">Home</a>
+          <a href="#product" class="hidden lg:block text-white ml-4">Product</a>
+        </div>
+      </div>
+      <div class="flex items-center justify-between gap-x-3">
+        <img class="hidden lg:block" src="../assets/icons/search-nav.png" alt="search-icon">
+        <img src="../assets/icons/ShoppingCart -mobile.png" alt="shoping-icon">
+        <div class="hidden lg:flex gap-x-3">
+          <button class="text-white px-4 py-2 rounded border-2">Sign In</button>
+          <button class="bg-primary text-black px-4 py-2 rounded">Sign Up</button>
+        </div>
+
+        <div onclick="toggleMenu()" class="flex flex-col justify-between h-5 cursor-pointer lg:hidden">
+          <span class="bg-[#ddd] w-5 h-0.5"></span>
+          <span class="bg-[#ddd] w-3 h-0.5"></span>
+          <span class="bg-[#ddd] w-5 h-0.5"></span>
+        </div>
+      </div>
+
+      <div id="menu" class="hidden absolute top-16 right-0 bg-gray-800 py-2 shadow-lg lg:hidden">
+        <a href="#home" class="block px-4 py-2 text-white hover:bg-gray-700">Home</a>
+        <a href="#product" class="block px-4 py-2 text-white hover:bg-gray-700">Product</a>
+        <a href="#logout" class="block px-4 py-2 text-white hover:bg-gray-700">Logout</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main class="w-11/12 mx-auto pt-4 col-span-4 order-3">
+
+    <section class="flex justify-between">
+      <div class="flex flex-col gap-y-2">
+        <h1 class="font-semibold text-2xl">Product List</h1>
+        <button class="bg-primary rounded px-2 py-2">
+          <div class="flex justify-center items-center">
+            <p class="text-semibold font-bold mr-2">+</p>
+            <p class="text-base font-semibold">Add Product</p>
+          </div>
+        </button>
+      </div>
+      
+      <div class="flex flex-col gap-y-2">
+        <p class="text-lightgray">Search Product</p>
+        <div>
+          <input type="text" placeholder="Enter Product Name" class="border py-2 pl-2 pr-16 rounded">
+          <button class="bg-primary rounded px-2 py-2">
+            <div class="flex justify-center items-center">
+              <img src="../assets/icons/filter.png" alt="filter-icon">
+              <p class="text-base font-semibold">Filter</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="">
+      <table class="min-w-full bg-white border border-gray-200 mt-8">
+        <thead>
+          <tr class="bg-gray-100 text-gray-600 font-semibold leading-normal">
+            <th class="py-3 px-6 font-semibold text-xs lg:text-medium"><input type="checkbox"></th>
+            <th class="py-3 px-6 font-semibold text-xs lg:text-medium">Image</th>
+            <th class="py-3 px-6 font-semibold text-xs lg:text-medium">Product Name</th>
+            <th class="py-3 px-6 font-semibold text-xs lg:text-medium">Price</th>
+            <th class="py-3 px-6 font-semibold text-xs lg:text-medium">Desc</th>
+            <th class="py-3 px-6 font-semibold text-xs lg:text-medium">Product Size</th>
+            <th class="py-3 px-6 font-semibold text-xs lg:text-medium">Method</th>
+            <th class="py-3 px-6 font-semibold text-xs lg:text-medium">Stock</th>
+            <th class="py-3 px-6 font-semibold text-xs lg:text-medium">Action</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-600 text-xs font-light text-center">
+          <tr class="border-b border-gray-200 hover:bg-gray-100">
+            <td class="py-3 px-6"><input type="checkbox"></td>
+            <td class="py-3 px-4"><img src="../assets/images/product-admin.png" alt="product-img"></td>
+            <td class="py-3 px-4">Caramel Machiato</td>
+            <td class="py-3 px-4">IDR 40.000</td>
+            <td class="py-3 px-4">Cold brewing is a method of brewing that ...</td>
+            <td class="py-3 px-4">R,L,XL,250gr</td>
+            <td class="py-3 px-4">Deliver, Dine In</td>
+            <td class="py-3 px-4">200</td>
+            <td class="flex pt-4 px-4 gap-x-4 text-center justify-center items-center">
+              <img src="../assets/icons/fi_edit.png" alt="edit-icon" class="">
+              <img src="../assets/icons/fi_delete.png" alt="delete-icon">
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-100">
+            <td class="py-3 px-6"><input type="checkbox"></td>
+            <td class="py-3 px-4"><img src="../assets/images/product-admin.png" alt="product-img"></td>
+            <td class="py-3 px-4">Caramel Machiato</td>
+            <td class="py-3 px-4">IDR 40.000</td>
+            <td class="py-3 px-4">Cold brewing is a method of brewing that ...</td>
+            <td class="py-3 px-4">R,L,XL,250gr</td>
+            <td class="py-3 px-4">Deliver, Dine In</td>
+            <td class="py-3 px-4">200</td>
+            <td class="flex pt-4 px-4 gap-x-4 text-center justify-center items-center">
+              <img src="../assets/icons/fi_edit.png" alt="edit-icon" class="">
+              <img src="../assets/icons/fi_delete.png" alt="delete-icon">
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-100">
+            <td class="py-3 px-6"><input type="checkbox"></td>
+            <td class="py-3 px-4"><img src="../assets/images/product-admin.png" alt="product-img"></td>
+            <td class="py-3 px-4">Caramel Machiato</td>
+            <td class="py-3 px-4">IDR 40.000</td>
+            <td class="py-3 px-4">Cold brewing is a method of brewing that ...</td>
+            <td class="py-3 px-4">R,L,XL,250gr</td>
+            <td class="py-3 px-4">Deliver, Dine In</td>
+            <td class="py-3 px-4">200</td>
+            <td class="flex pt-4 px-4 gap-x-4 text-center justify-center items-center">
+              <img src="../assets/icons/fi_edit.png" alt="edit-icon" class="">
+              <img src="../assets/icons/fi_delete.png" alt="delete-icon">
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-100">
+            <td class="py-3 px-6"><input type="checkbox"></td>
+            <td class="py-3 px-4"><img src="../assets/images/product-admin.png" alt="product-img"></td>
+            <td class="py-3 px-4">Caramel Machiato</td>
+            <td class="py-3 px-4">IDR 40.000</td>
+            <td class="py-3 px-4">Cold brewing is a method of brewing that ...</td>
+            <td class="py-3 px-4">R,L,XL,250gr</td>
+            <td class="py-3 px-4">Deliver, Dine In</td>
+            <td class="py-3 px-4">200</td>
+            <td class="flex pt-4 px-4 gap-x-4 text-center justify-center items-center">
+              <img src="../assets/icons/fi_edit.png" alt="edit-icon" class="">
+              <img src="../assets/icons/fi_delete.png" alt="delete-icon">
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-100">
+            <td class="py-3 px-6"><input type="checkbox"></td>
+            <td class="py-3 px-4"><img src="../assets/images/product-admin.png" alt="product-img"></td>
+            <td class="py-3 px-4">Caramel Machiato</td>
+            <td class="py-3 px-4">IDR 40.000</td>
+            <td class="py-3 px-4">Cold brewing is a method of brewing that ...</td>
+            <td class="py-3 px-4">R,L,XL,250gr</td>
+            <td class="py-3 px-4">Deliver, Dine In</td>
+            <td class="py-3 px-4">200</td>
+            <td class="flex pt-4 px-4 gap-x-4 text-center justify-center items-center">
+              <img src="../assets/icons/fi_edit.png" alt="edit-icon" class="">
+              <img src="../assets/icons/fi_delete.png" alt="delete-icon">
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-100">
+            <td class="py-3 px-6"><input type="checkbox"></td>
+            <td class="py-3 px-4"><img src="../assets/images/product-admin.png" alt="product-img"></td>
+            <td class="py-3 px-4">Caramel Machiato</td>
+            <td class="py-3 px-4">IDR 40.000</td>
+            <td class="py-3 px-4">Cold brewing is a method of brewing that ...</td>
+            <td class="py-3 px-4">R,L,XL,250gr</td>
+            <td class="py-3 px-4">Deliver, Dine In</td>
+            <td class="py-3 px-4">200</td>
+            <td class="flex pt-4 px-4 gap-x-4 text-center justify-center items-center">
+              <img src="../assets/icons/fi_edit.png" alt="edit-icon" class="">
+              <img src="../assets/icons/fi_delete.png" alt="delete-icon">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="flex justify-between">
+        <p class="text-lightgray">Show 5 product of 100 product</p>
+        <div class="flex gap-x-3">
+          <p>Prev</p>
+          <p class="text-primary">1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>Next</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="hidden md:flex flex-col w-11/12 gap-y-4 mx-auto pt-4 order-2 col-span-1 box-border border-r">
+    <div class="flex flex-col items-center justify-normal box-border px-2">
+      <div class="flex flex-col items-center gap-y-4">
+        <div class="flex items-center gap-x-2 bg-primary font-semibold pr-12 py-2 pl-2 rounded-md">
+          <img src="../assets/icons/dashboard-icon.png" alt="dashboard-icon">
+          <p>Dashboard</p>
+        </div>
+        <div class="flex items-center gap-x-2 w-full">
+          <img src="../assets/icons/product-icon.png" alt="dashboard-icon">
+          <p>Product</p>
+        </div>
+        <div class="flex items-center gap-x-2 w-full">
+          <img src="../assets/icons/order-icon.png" alt="dashboard-icon">
+          <p>Order</p>
+        </div>
+        <div class="flex items-center gap-x-2 w-full">
+          <img src="../assets/icons/user-icon.png" alt="dashboard-icon">
+          <p>User</p>
+        </div>
+        <div class="flex items-center gap-x-2 w-full">
+          <img src="../assets/icons/logout-icon.png" alt="dashboard-icon">
+          <p>Logout</p>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>

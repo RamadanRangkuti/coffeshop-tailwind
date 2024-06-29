@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/main.css">
+  <title>Coffeshop</title>
+</head>
+<body class="box-border flex flex-col lg:flex lg:flex-row lg:h-1/2">
+
+  <header class="flex flex-col px-5 mt-8 gap-y-3 mb-2 lg:hidden">
+    <img class="md:w-3/4" src="../assets/icons/logo-footer.png" alt="Coffeshop-icon" />
+    <h2 class="text-secondary font-semibold text-2xl">Register</h2>
+    <p class=" text-lightgray text-base">Fill out the form correctly</p>
+  </header>
+
+  <header class="hidden lg:block lg:max-h-screen">
+    <img class="bg-center bg-no-repeat" src="../assets/images/bg-register.png" alt="Register-image">
+  </header>
+
+
+  <main class="box-border pt-5 px-5 w-full lg:px-12">
+      <header class="hidden lg:flex lg:flex-col gap-y-3 mb-2">
+        <img class="w-1/2" src="../assets/icons/logo-footer.png" alt="Coffeshop-icon" />
+        <h2 class="text-secondary font-semibold text-2xl">Register</h2>
+        <p class=" text-lightgray text-base">Fill out the form correctly</p>
+      </header>
+    <section>
+      <form>
+        <label class="text-lightblack2 font-semibold lg:text-lg" for="fullname">Full Name</label>
+        <div class="relative mt-2">
+          <img class="absolute mt-4 ml-5" width="20" height="20" src="../assets/icons/profile.png" alt="name-icon" />
+          <input
+            class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs lg:text-sm"
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder="Enter Your Full Name"
+            autocomplete="name"
+          />
+        </div>
+        <label class="text-lightblack2 font-semibold lg:text-lg" for="email">Email</label>
+        <div class="relative mt-2">
+          <img class="absolute mt-4 ml-5" width="20" height="20" src="../assets/icons/mail.png" alt="email-icon"" />
+          <input class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs lg:text-sm" type="email" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
+        </div>
+        <label class="text-lightblack2 font-semibold lg:text-lg" for="password">Password</label>
+        <div class="relative mt-2">
+          <img class="absolute mt-4 ml-5" width="20" height="20" src="../assets/icons/password.png" alt="password-icon" />
+          <input
+            class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs lg:text-sm"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter Your Password"
+            autocomplete="off"
+          />
+        </div>
+        <label class="text-lightblack2 font-semibold lg:text-lg" for="confirmpassword">Confirm Password</label>
+        <div class="relative mt-2">
+          <img class="absolute mt-4 ml-5" width="20" height="20" src="../assets/icons/password.png" alt="confirmpassword-icon" />
+          <input
+            class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs lg:text-sm"
+            type="password"
+            name="confirmpassword"
+            id="confirmpassword"
+            placeholder="Enter Your Password Again"
+            autocomplete="off"
+          />
+        </div>
+        <button class="text-lightblack font-semibold my-5 text-lg bg-primary hover:bg-darkprimary active:bg-darkprimary2 rounded-lg w-full py-2" type="submit">Register</button>
+        <p class="text-center text-lightgray text-sm">Have An Account? <a class="text-primary hover:text-darkprimary hover:underline active:text-darkprimary2 active:underline" href="login.html">Login</a></p>
+      </form>
+    </section>
+    <section>
+      <p class="text-center text-sm mt-5 text-lightgray3">Or</p>
+      <div class="flex justify-around md:gap-x-4 lg:gap-x-4">
+        <button class="px-2 py-2 rounded-xl shadow-xl hover:bg-darkwhite active:bg-darkgray2 md:w-full md:py-3 lg:w-full lg:py-3">
+          <div class="flex justify-center">
+            <img class="" src="../assets/icons/google.png" alt="facebook-icon" class="facebook-icon" />
+            <div class="hidden text-lightgray ml-6 md:block lg:block">Google</div>
+          </div>
+        </button>
+        <button class="px-2 py-2 rounded-xl shadow-xl hover:bg-darkwhite active:bg-darkgray2 md:w-full md:py-3 lg:w-full lg:bg-white lg:py-3">
+          <div class="flex justify-center">
+            <img class="" src="../assets/icons/fb.png" alt="google-icon" class="google-icon" />
+            <div class="hidden text-lightgray ml-6 md:block lg:block">Facebook</div>
+          </div>
+        </button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/main.css">
+  <title>Coffeshop</title>
+</head>
+<body class="box-border flex flex-col lg:flex lg:flex-row lg:h-1/2">
+
+  <header class="flex flex-col px-5 mt-8 gap-y-3 mb-2 lg:hidden">
+    <img class="md:w-3/4" src="../assets/icons/logo-footer.png" alt="Coffeshop-icon" />
+    <h2 class="text-secondary font-semibold text-2xl">Fill out the form correctly</h2>
+    <p class=" text-lightgray text-base">We will send new password to your email</p>
+  </header>
+
+  <header class="hidden lg:block lg:max-h-screen">
+    <img class="bg-center bg-no-repeat" src="../assets/images/bg-forgot.png" alt="Register-image">
+  </header>
+
+
+  <main class="box-border pt-5 px-5 w-full lg:flex lg:flex-col lg:justify-center lg:items-center">
+    <div class="lg:w-11/12">
+      <header class="hidden lg:flex lg:flex-col gap-y-3 mb-2">
+        <img class="w-1/2" src="../assets/icons/logo-footer.png" alt="Coffeshop-icon" />
+        <h2 class="text-secondary font-semibold text-2xl">Register</h2>
+        <p class=" text-lightgray text-base">Fill out the form correctly</p>
+      </header>
+      <section>
+        <form>
+          <label class="text-lightblack2 font-semibold lg:text-lg" for="email">Email</label>
+          <div class="relative mt-2">
+            <img class="absolute mt-4 ml-5" width="20" height="20" src="../assets/icons/mail.png" alt="email-icon"" />
+            <input class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs lg:text-sm" type="email" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
+          </div>
+          <button class="text-lightblack font-semibold my-5 text-lg bg-primary hover:bg-darkprimary active:bg-darkprimary2 rounded-lg w-full py-2" type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
